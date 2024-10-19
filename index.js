@@ -35,6 +35,7 @@ async function add() {
             endereco: document.getElementById('endereco').value
         });
         //Se der certo o envio dos dados
+        document.location.href = "sucess.html"
         console.log("Document written with ID: ", docRef.id);
 
     } catch (e) { //Caso der erro é exibido
