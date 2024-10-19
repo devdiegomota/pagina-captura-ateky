@@ -22,6 +22,10 @@ body {
 }
 .error {
     display: none;
+    font-size: 14px;
+    background-color: rgb(245, 0, 0);
+    color: rgb(255, 255, 255);
+    padding: 2px;
 }
 input {
     margin-top: 3px;
