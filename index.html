@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <link rel="stylesheet" href="index.css">
+
+</head>
+
+<body class="centralize">
+    <h3 id="descricao">Olá, entraremos em contato pelos dados abaixo:</h3>
+
+    <form id="form">
+        <div class="caixa-nome">
+            <div><label class="titulo-inputs">Nome</label></div>
+            <input type="text" id="nome" name="nome" placeholder="Ex:João Nunes">
+            <div class="error" id="erro-nome-obrigatorio">Nome é obrigatório</div>
+        </div>
+        <div class="caixa-telefone">
+            <div><label class="titulo-inputs">Telefone</label></div>
+            <input class="largura" type="number" id="telefone" name="telefone" placeholder="Ex: 48991227555" />
+            <div class="error" id="erro-tel">Telefone é obrigatório</div>
+        </div>
+        <div class="caixa-endereco largura">
+            <div><label class="titulo-inputs">Nome da rua e bairro</label></div>
+            <input type="text" id="endereco" name="endereco" placeholder="Ex: Almir Santos Miranda, Morrote" />
+        </div>
+        <div>
+            <button type="button" id="submit" class="b-solid">Enviar</button>
+        </div>
+    </form>
+</body>
+
+
+<script type="module">
+  
+
+    // Referencias
+    
+
+    //add documento
+
+    /*async function AddDocument_AutoId(){
+        var ref = collection(db,"Leads");
+
+        const docRef = await addDoc(
+            ref, {
+                nome: nome.value,
+                telefone: telefone.value,
+                endereco: endereco.value
+            }
+        )
+        .then(()=>{
+            alert("Adicionado com sucesso!");
+
+        })
+        .catch((error)=>{
+            alert("Algo deu errado!, erro:"+ error);
+        });
+    }
+*/
+
+    //import { collection, addDoc } from "firebase/firestore";
+    
+
+
+</script>
+<script type="module" src="index.js"></script>
+
+</html>

@@ -1,0 +1,51 @@
+.centralize {
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#descricao {
+    max-width: 350px;
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: blue;
+    padding: 0px 30px;
+} 
+.titulo-inputs {
+    color: white;
+    font-size: 13px;
+}
+#submit {
+    margin-top: 10px;
+    
+}
+.error {
+    display: none;
+}
+input {
+    margin-top: 3px;
+    margin-bottom: 7px;
+    height: 35px;
+    width: 330px;
+    border: none;
+    border-radius: 2px;
+}
+.largura {
+    max-width: 600px;
+}
+#submit {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    background-color: red;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+#submit:active {
+    background-color: rgb(246, 105, 105);
+}
