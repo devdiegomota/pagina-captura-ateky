@@ -37,15 +37,15 @@ input {
     max-width: 400px;
 }
 #submit {
-    padding: 10px 15px;
-    border: none;
-    border-radius: 4px;
-    background-color: #0018ff;
+    padding: 10px 12px;
+    border: 1px solid white;
+    border-radius: 10px;
+    background-color: transparent;
     color: white;
     font-weight: bold;
     cursor: pointer;
     margin-top: 10px;
-    width: 250px;
+    width: 294px;
 
 }
 #submit:active {
