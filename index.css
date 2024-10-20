@@ -30,6 +30,7 @@ img {
     background-color: rgb(245, 0, 0);
     color: rgb(255, 255, 255);
     padding: 2px;
+    text-align-last: center;
 }
 input {
     margin-top: 3px;
