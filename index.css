@@ -6,12 +6,13 @@
     align-items: center;
 }
 #descricao {   
-    font-size: 14px;
+    justify-self: center;
+    font-size: 13px;
     color: rgb(255, 255, 255);
 }
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background: blue;
+    background: #004a93;
 } 
 .titulo-inputs {
     color: white;
@@ -19,6 +20,9 @@ body {
 }
 #submit {
     margin-top: 10px;
+}
+img {
+    width: 200px;
 }
 .error {
     display: none;

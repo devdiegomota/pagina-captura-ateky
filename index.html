@@ -11,11 +11,13 @@
 
 <body class="centralize">
     
-    <h3 class="error" id="error">Ops! Faltou preencher algum campo.</h3>
+
+    <img src="img/atekylogo.png">
     
-    <h3 id="descricao">Olá, entraremos em contato pelos dados abaixo:</h3>
 
     <form id="form">
+        <div id="descricao"><b>Olá, entraremos em contato pelos dados abaixo:</b></div><br>
+
         <div class="caixa-nome">
             <div><label class="titulo-inputs">Nome</label></div>
             <input type="text" id="nome" name="nome" placeholder="Ex: Diego Mota">
@@ -30,6 +32,7 @@
             <div><label class="titulo-inputs">Nome da rua e bairro</label></div>
             <input type="text" id="endereco" name="endereco" placeholder="Ex: Almir Santos Miranda, Morrote, Tubarão" />
         </div>
+        <h3 class="error" id="error">Ops! Faltou preencher algum campo.</h3>
         <div>
             <button type="button" id="submit" class="b-solid">Enviar</button>
         </div>
