@@ -1,5 +1,5 @@
 .centralize {
-    height: 90vh;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -9,19 +9,18 @@
     max-width: 350px;
     font-size: 20px;
     color: rgb(255, 255, 255);
+    margin: 7px;
 }
 body {
+    text-align: center;
     font-family: Arial, Helvetica, sans-serif;
-    background: blue;
+    background: rgb(0 74 147);
     padding: 0px 30px;
+    margin: 0px auto;
 } 
 .titulo-inputs {
     color: white;
     font-size: 13px;
-}
-#submit {
-    margin-top: 10px;
-    
 }
 .error {
     display: none;
@@ -35,16 +34,19 @@ input {
     border-radius: 2px;
 }
 .largura {
-    max-width: 600px;
+    max-width: 400px;
 }
 #submit {
     padding: 10px 15px;
     border: none;
     border-radius: 4px;
-    background-color: red;
+    background-color: #0018ff;
     color: white;
     font-weight: bold;
     cursor: pointer;
+    margin-top: 10px;
+    width: 250px;
+
 }
 #submit:active {
     background-color: rgb(246, 105, 105);
