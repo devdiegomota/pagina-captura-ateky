@@ -4,40 +4,167 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulário</title>
-    <link rel="stylesheet" href="index.css">
+    <title>DiegoDev</title>
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+        rel="stylesheet">
+    <script src="menu.js" defer></script>
 
 </head>
 
-<body class="centralize">
-    
-
-    <img src="img/atekylogo.png">
-    
-    <p id="descricao" style="margin: 0px;"><b>Olá, entraremos em contato pelos dados abaixo:</b></p><br>
-
-    <form id="form">
-        <div class="caixa-nome">
-            <div><label class="titulo-inputs">Nome</label></div>
-            <input type="text" id="nome" name="nome" placeholder="Ex: Diego Mota">
-        
+<body>
+    <div class="primeira-secao" id="home"><!--PRIMEIRA SEÇÃO-->
+        <nav>
+            <a href="index.html">
+                <h2 class="portifolio">Portifo<span>lio.</span></h2>
+            </a>
+            <ul>
+                <li><a href="#home">Início</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#projetos">Projetos</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+        <!--MENU MOBILE-->
+        <div class="btn-abrir-menu" id="btn-menu">
+            <img src="img/menu-mobile.svg">
         </div>
-        <div class="caixa-telefone">
-            <div><label class="titulo-inputs">Telefone</label></div>
-            <input class="largura" type="number" id="telefone" name="telefone" placeholder="Ex: 48991227555" />
+        <div class="menu-mobile" id="menu-mobile">
+            <div class="btn-fechar">
+                <img src="img/x-lg.svg">
+            </div>
+            <div>
+                <ul>
+                    <li><a href="#home">Início</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#projetos">Projetos</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="overlay-menu" id="overlay-menu">
+        </div><!--FIM MENU MOBILE-->
+        <div class="caixa-banner">
+        <div class="banner-principal">
+            <!--TITULO DEV-->
+            <div class="p-meunome hidden">
+                <h1>Diego <span>Mota</span></h1>
+                <h3>Desenvolvedor Web</h3>
+            </div>
+           
+            <div class="img-banner">
+
+                <img src="img/banner2.png" alt="Banner de capa" class="hidden">
+
+            </div>
+           </div>
+        </div>
+    </div><!--FIM PRIMEIRA SEÇÃO-->
+    <section id="sobre"><!--SEÇÃO SOBRE MIN-->
+        <img src="img/diego.png" class="hidden">
+        <div class="hidden">
+            <h2>Sobre min</h2>
+            <p>Olá, tenho 30 anos, sou estudande de programação, tenho feito já alguns projetos Web utilizando HTML, CSS e JavaScript. Você precisa de um site para sua empresa? Clique no botão abaixo para conversarmos.</p>
+            <a href="https://wa.me/+5548991227555" target="_blank">
+                <button>Mensagem WhatsApp</button>
+            </a>
+        </div>
+    </section><!--FIM SEÇÃO SOBRE MIN-->
+    <div class="secao-projetos" id="projetos"><!--SEÇÃO PROJETOS-->
+        <h2>Projetos Pessoais</h2>
+        <div class="card-principal hidden">
+            
+            <div class="card hidden">
+                <img src="img/tarefas.png">
+                <h5>App - Lista de Tarefas</h5>
+                <p>Simples aplicação para listar tarefas do dia a dia, desenvolvido em HTML, CSS e JavaScript.</p>
+                <a href="https://listartarefa.netlify.app/" target="_blank"><button>Ver Projeto</button></a>
+            </div>
+            <div class="card hidden">
+                <img src="img/cronometro.png">
+                <h5>App - Cronômetro</h5>
+                <p>Projeto feito em HTML, CSS e JavaScript, simples e funcional. Inclui botões de Iniciar, Pausar e Parar.</p>
+                <a href="https://cronometrar.netlify.app/" target="_blank"><button>Ver Projeto</button></a>
+            </div>
+            <div class="card hidden">
+                <img src="img/calculadora.png">
+                <h5>App - Calculadora</h5>
+                <p>Calculadora online com visual realista. Feito em HTML, CSS e JavaScript.</p>
+                <a href="https://calculadoraon.netlify.app/" target="_blank"><button>Ver Projeto</button></a>
+            </div>
+            <div class="card hidden">
+                <img src="img/horadia.png">
+                <h5>App - Hora Do Dia</h5>
+                <p>Veja a hora ilustrada com imagem, desenvolvido em HTML, CSS e JavaScript.</p>
+                <a href="https://horadodiaa.netlify.app/" target="_blank"><button>Ver Projeto</button></a>
+            </div>
+            <div class="card hidden">
+                <img src="img/contar.png">
+                <h5>App - Contar Número</h5>
+                <p>Faça contagem inserindo intervalos, desenvolvido em HTML, CSS e JavaScript.</p>
+                <a href="https://contarnumero.netlify.app/" target="_blank"><button>Ver Projeto</button></a>
+            </div>
+            <div class="card hidden">
+                <img src="img/idade.png">
+                <h5>App - Qual Sua Idade?</h5>
+                <p>Descubra sua idade rapidamente, desenvolvido em HTML, CSS e JavaScript.</p>
+                <a href="https://qualasuaidade.netlify.app/" target="_blank"><button>Ver Projeto</button></a>
+            </div>
+            <div class="card hidden">
+                <img src="img/tabuada.png">
+                <h5>App - Gerar Tabuada</h5>
+                <p>Gere tabuadas de qualquer número, desenvolvido em HTML, CSS e JavaScript.</p>
+                <a href="https://gerar-tabuada.netlify.app/" target="_blank"><button>Ver Projeto</button></a>
+            </div>
+            <div class="card hidden">
+                <img src="img/laprevia.png">
+                <h5>App - Lâmpada Interativa</h5>
+                <p>Brinque com essa divertida lâmpada, desenvolvido em HTML, CSS e JavaScript.</p>
+                <a href="https://lampadainterativa.netlify.app/" target="_blank"><button>Ver Projeto</button></a>
+            </div>
+            <div class="card hidden">
+                <img src="img/semaf.png">
+                <h5>App - Semáforo</h5>
+                <p>Controle as cores e domine o trânsito, desenvolvido em HTML, CSS e JavaScript.</p>
+                <a href="https://semaforando.netlify.app/" target="_blank"><button>Ver Projeto</button></a>
+            </div>
+            <div class="card hidden">
+                <img src="img/analisador.png">
+                <h5>App - Analisar Números</h5>
+                <p>Digite vários números e obtenha dados, desenvolvido em HTML, CSS e JavaScript.</p>
+                <a href="https://analise-numeros.netlify.app/" target="_blank"><button>Ver Projeto</button></a>
+            </div>
+            <div class="card hidden">
+                <img src="img/captura-ateky.png">
+                <h5>Site Captar Clientes</h5>
+                <p>Pega as informações e envia para o banco de dados, desenvolvido em HTML, CSS, JavaScript e Firestore</p>
+                <a href="https://contato-ateky.netlify.app/" target="_blank"><button>Ver Projeto</button></a>
+            </div>
             
         </div>
-        <div class="caixa-endereco largura">
-            <div><label class="titulo-inputs">Endereco</label></div>
-            <input type="text" id="endereco" name="endereco" placeholder="Ex: Almir Santos Miranda, Morrote, Tubarão" />
-        </div>
-        <h3 class="error" id="error">Ops! Faltou preencher algum campo.</h3>
+    </div><!--FIM SEÇÃO PPROJETOS-->
+    <footer id="contato"><!--RODAPÉ-->
         <div>
-            <button type="button" id="submit" class="b-solid">Enviar</button>
+            <h5 class="hidden">Diego Mota</h5>
+            <p class="hidden">Para mais informações</p>
         </div>
-    </form>
+        <div class="icons hidden">
+            <a href="https://wa.me/+5548991227555" target="_blank">
+                <img src="img/zap.png">
+            </a>
+            <a href="https://github.com/devdiegomota" target="_blank">
+                <img src="img/git.png">
+            </a>
+            <a href="https://www.linkedin.com/in/diego-mota-b62b86270/" target="_blank">
+                <img src="img/linkedin.png">
+            </a>
+        </div>
+    </footer>
 </body>
 
-<script type="module" src="index.js"></script>
+<script src="efeitos.js" defer></script>
 
 </html>
