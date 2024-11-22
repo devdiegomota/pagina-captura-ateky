@@ -5,3 +5,9 @@ body {
 img {
     width: 100px;
 }
+#lista-clientes {
+    background-color: white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    
+}

@@ -52,19 +52,21 @@ function AddClientesNaTela(clientes) {
     
     clientes.forEach(cliente => {
         const li = document.createElement('li');
-        //li.classList.add(cliente.tipo);
+        //li.classList.add('');
         //li.id = cliente.uid; //adiciona o uid de cada transação como id de cada lista
-        const endereco = document.createElement('p');
-        endereco.innerHTML = cliente.endereco;
-        li.appendChild(endereco)
+        
     
         const nome = document.createElement('p')
-        nome.innerHTML = cliente.nome;
+        nome.innerHTML = '<b>Nome</b> - ' + cliente.nome;
         li.appendChild(nome);
     
         const telefone = document.createElement('p');
-        telefone.innerHTML = cliente.telefone;
+        telefone.innerHTML = '<b>Tel.</b> - ' + cliente.telefone;
         li.appendChild(telefone);
+
+        const endereco = document.createElement('p');
+        endereco.innerHTML = '<b>End</b>. - ' + cliente.endereco;
+        li.appendChild(endereco)
 
         listaordenada.appendChild(li);
     });

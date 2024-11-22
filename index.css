@@ -56,3 +56,14 @@ input {
 #submit:active {
     background-color: rgb(246, 105, 105);
 }
+a {
+    color: white;
+    text-decoration: none;
+    font-size: 12px;
+}
+#link-painel {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    
+}
