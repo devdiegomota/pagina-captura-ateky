@@ -26,6 +26,9 @@ function UserLoged () {
         
         ProcuraClientes();
     
+      } else {
+    
+        window.location.href = "login.html"
       }
     });
 }
