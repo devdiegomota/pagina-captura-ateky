@@ -1,4 +1,3 @@
-import { getAuth, signOut, onAuthStateChanged} from "https://www.gstatic.com/firebasejs/10.14.1/firebase-auth.js";
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-app.js";
 import { getAuth, onAuthStateChanged, signInWithEmailAndPassword, sendPasswordResetEmail } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-auth.js";
 
@@ -34,7 +33,7 @@ function UserLoged () {
       }
     });
 }
-
+//-------------------------------------------------------------------------------
 
 //BOTOES
 const recoverpass = document.getElementById('recover-password-b');
@@ -58,6 +57,7 @@ submit.addEventListener("click", function (event) {
 
             window.location.href = "painel.html"
             // ...
+            
         })
         .catch((error) => {
             alert(GetErrorMessage(error))

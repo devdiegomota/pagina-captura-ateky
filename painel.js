@@ -29,7 +29,27 @@ function UserLoged () {
       }
     });
 }
-//-----------------------------------------------------------------
+//-------------------------------------------------------------------------
+//CHAMA O BOTAO DESLOGAR E MONITORA OS CLIQUES NELE PARA CHAMAR FUNCAO
+const logoutbutton = document.getElementById('logout-button')
+logoutbutton.addEventListener("click", function() {
+    
+    Logout();
+  
+  });
+//FUNÇÃO QUE AO SER CHAMADA DESLOGA O USUARIO E MANDA PARA A PAGINA DESEJADA, OU PAGINA DE LOGIN
+function Logout() {
+    const auth = getAuth();
+    signOut(auth)
+    .then(() => {
+        window.location.href = "login.html" //PAGINA ESCOLHIDA AO DESLOGAR
+    })
+    .catch((error) => {
+        alert('Falha ao deslogar')
+    console.log(error);
+    });
+}
+//-------------------------------------------------------------------
 
 //FUNÇÃO QUE PEGA OS DADOS NO FIRESTORE-------------------------------------------------
 async function ProcuraClientes() {
