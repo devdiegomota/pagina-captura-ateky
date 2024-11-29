@@ -1,6 +1,6 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-app.js";
 import { getFirestore, query, where, collection, getDocs, deleteDoc, doc, orderBy } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore.js";
-import { getAuth, signOut, onAuthStateChanged} from "https://www.gstatic.com/firebasejs/10.14.1/firebase-auth.js";
+import { getAuth, signOut, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-auth.js";
 
 const firebaseConfig = {
     apiKey: "AIzaSyCdAe8MPSQuQuWf70YLt_dKSbmL63vs4LY",
@@ -19,38 +19,38 @@ const db = getFirestore(app);
 
 UserLoged()
 //VERIFICA SE O USUARIO TA LOGADO-----------------------------------------------------
-function UserLoged () {
+function UserLoged() {
     const auth = getAuth();
     onAuthStateChanged(auth, (user) => {
-      if (user) {
-        
-        ProcuraClientes();
-    
-      } else {
-    
-        window.location.href = "login.html"
-      }
+        if (user) {
+
+            ProcuraClientes();
+
+        } else {
+
+            window.location.href = "login.html"
+        }
     });
 }
 //-------------------------------------------------------------------------
 //CHAMA O BOTAO DESLOGAR E MONITORA OS CLIQUES NELE PARA CHAMAR FUNCAO
 const logoutbutton = document.getElementById('logout-button')
-logoutbutton.addEventListener("click", function() {
-    
+logoutbutton.addEventListener("click", function () {
+
     Logout();
-  
-  });
+
+});
 //FUNÇÃO QUE AO SER CHAMADA DESLOGA O USUARIO E MANDA PARA A PAGINA DESEJADA, OU PAGINA DE LOGIN
 function Logout() {
     const auth = getAuth();
     signOut(auth)
-    .then(() => {
-        window.location.href = "login.html" //PAGINA ESCOLHIDA AO DESLOGAR
-    })
-    .catch((error) => {
-        alert('Falha ao deslogar')
-    console.log(error);
-    });
+        .then(() => {
+            window.location.href = "login.html" //PAGINA ESCOLHIDA AO DESLOGAR
+        })
+        .catch((error) => {
+            alert('Falha ao deslogar')
+            console.log(error);
+        });
 }
 //-------------------------------------------------------------------
 
@@ -60,9 +60,11 @@ async function ProcuraClientes() {
     const q = query(collection(db, "clientes"))
 
     const querySnapshot = await getDocs(q);
-   
+
     const clientes = querySnapshot.docs.map(doc => ({
         ...doc.data(),
+        uid: doc.id
+
     }));
 
     console.log(clientes)
@@ -72,17 +74,27 @@ async function ProcuraClientes() {
 //----------------------------------------------------//---------------------------------
 function AddClientesNaTela(clientes) {
     const listaordenada = document.getElementById('lista-clientes')
-    
+
     clientes.forEach(cliente => {
         const li = document.createElement('li');
         //li.classList.add('');
-        //li.id = cliente.uid; //adiciona o uid de cada transação como id de cada lista
-        
-    
+        li.id = cliente.uid; //adiciona o uid de cada transação como id de cada lista
+
+        //criando o botão remover transação na tela
+        const BotaoDelete = document.createElement('button')
+        BotaoDelete.innerHTML = "Remover"
+        BotaoDelete.classList.add('botao-remover-home')
+        BotaoDelete.addEventListener('click', event => {
+            event.stopPropagation();
+            ConfirmRemover(cliente)
+        })
+        li.appendChild(BotaoDelete)
+        //botão criado----------------
+
         const nome = document.createElement('p')
         nome.innerHTML = '<b>Nome</b> - ' + cliente.nome;
         li.appendChild(nome);
-    
+
         const telefone = document.createElement('p');
         telefone.innerHTML = '<b>Tel.</b> - ' + cliente.telefone;
         li.appendChild(telefone);
@@ -93,5 +105,24 @@ function AddClientesNaTela(clientes) {
 
         listaordenada.appendChild(li);
     });
+}
+
+//-----------------------------------------------------------------------------------------
+//FUNÇÃO QUE REMOVE A TRANSAÇÃO PELO BOTÃO
+//etapa de confirmação antes de deletar
+function ConfirmRemover(cliente) {
+    const deveriaremover = confirm('Deseja remover esse cadastro?')
+    console.log(deveriaremover)
+    if(deveriaremover) {
+        RemovaTransacao(cliente)
     }
+}
+//remove direto do firestore e da tela
+async function RemovaTransacao(cliente){
+    await deleteDoc(doc(db, "clientes", cliente.uid));
+    document.getElementById(cliente.uid).remove();
+}
+
+//------------------------------------//-------------------------------------------------------//
+
 
