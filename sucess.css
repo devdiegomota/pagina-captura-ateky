@@ -1,0 +1,38 @@
+.centralize {
+    height: 95vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#descricao {
+    max-width: 350px;
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    margin: 7px;
+}
+body {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    background: rgb(0 74 147);
+    padding: 0px 30px;
+    margin: 0px auto;
+}
+.largura {
+    max-width: 400px;
+}
+#submit {
+    padding: 10px 12px;
+    border: 1px solid white;
+    border-radius: 10px;
+    background-color: transparent;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+    width: 294px;
+
+}
+#submit:active {
+    background-color: rgb(246, 105, 105);
+}
