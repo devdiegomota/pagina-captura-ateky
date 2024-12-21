@@ -40,6 +40,13 @@ logoutbutton.addEventListener("click", function () {
     Logout();
 
 });
+//CHAMA O BOTAO INICIO E MONITORA OS CLIQUES NELE PARA CHAMAR FUNCAO
+const iniciobutton = document.getElementById('inicio-button')
+iniciobutton.addEventListener("click", event => {
+
+    window.location.href = "index.html"
+    
+});
 //FUNÇÃO QUE AO SER CHAMADA DESLOGA O USUARIO E MANDA PARA A PAGINA DESEJADA, OU PAGINA DE LOGIN
 function Logout() {
     const auth = getAuth();
